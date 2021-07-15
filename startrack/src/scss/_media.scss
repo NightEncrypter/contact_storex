@@ -8,6 +8,7 @@
   color:#f2f2f2;  
 
   }
+
   body {
     overflow-x: hidden;
   }
@@ -30,7 +31,7 @@ z-index:1;
 text-align: center;
       width: 30%;
       background: white;
-      // opacity: 0;
+     
       margin: 0;
       transform: scale(0);
       transform-origin: bottom right;
@@ -173,7 +174,7 @@ right:1.5rem;
 z-index:5;
 
 cursor: pointer;
-transition:0.3s;
+transition:0.5s;
 
 }
 
@@ -199,37 +200,27 @@ display:none;
   transition:0.5s;
   pointer-events: none;
 
-  
-}
-.active.overlay{
-  transform:scaleX(1);
-
-
-
-}
   .popup-box{
     position: relative;
     z-index:10;
     pointer-events:all;
-// display: none;
-    // border-radius: 40px;
-    // box-shadow:0 0 10px 0 rgba(51, 16, 16, 0.2);
     width: 22rem;
     height: 26rem;
     position:fixed;
     top:52%;
     left:50%;
-
- 
-    transform: translateY(700px);
-
+    transform: scale(0);
     transition: transform 0.5s!important;
     
     .contact-form{
       width:100%;
     
       height:100%;
-    
+
+      input[type='submit']{
+        margin:0;
+        margin-bottom: 0.5rem;
+           }
     }
   
 
@@ -245,16 +236,21 @@ display:none;
   padding: 0.2rem;
   font-size: 28px;
     position: absolute;
-    top:1rem;
-    right:1rem;
+    top:0.8rem;
+    right:0.8rem;
 
 
   }
-   input[type='submit']{
-margin:0;
-margin-bottom: 0.5rem;
-   }
+ 
   }
+}
+.active.overlay{
+  transform:scaleX(1);
+
+
+
+}
+  
 
   .active.popup-box{
     transform: scale(1);
@@ -263,19 +259,14 @@ margin-bottom: 0.5rem;
 
   }
 
-  // PRIVATE ROUTE FORM
-  // .contact-form {
-  //   // margin-top: 4rem;
+
 
   .container{
     padding:0 2rem;
   }
 
  
-  //   .radio-btns {
-  //     flex-direction: row;
-  //   }
-  // }
+
 
   #form-reg {
     margin-top: 2.5rem;

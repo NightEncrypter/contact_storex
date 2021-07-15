@@ -1,0 +1,305 @@
+@media (max-width: 650px) {
+    body {
+      overflow-x: hidden;
+    }
+  
+    .navbar {
+      .nav-menu {
+        position: fixed;
+        top: 3rem;
+        right: 0;
+        padding: 0 1rem;
+        display: flex;
+        overflow-x: hidden;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 50%;
+        z-index: 100;
+        box-shadow: -4px 4px 6px 0 rgba(0, 0, 0, 0.1);
+  text-align: center;
+        width: 30%;
+        background: white;
+     
+        margin: 0;
+        transform: scale(0);
+        transform-origin: bottom right;
+        transition: 0.4s ease-in-out;
+        li {
+          opacity: 0;
+          transition: 0.5s;
+          transform: translateX(200%);
+          transition-delay: 0.5s;
+          transition: 0.4s ease-in-out 0.3s;
+  
+          a {
+            padding: 0;
+            color: $bg-color;
+            // opacity: 0.8;
+            // transition: opacity 0.4s;
+            background: transparent;
+  
+            &:hover,
+            &:focus {
+              opacity: 1;
+              border-bottom: 1px solid $bg-color;
+            }
+          }
+  
+          a.sign-in {
+            border: none;
+            &:hover,
+            &:focus {
+              border-bottom: 1px solid $bg-color;
+            }
+          }
+        }
+      }
+    }
+  
+    .nav-menu.active {
+      // opacity: 1;
+  
+      overflow: hidden;
+  
+      transform: scale(1);
+  
+      li {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+    }
+  
+    .hamburger {
+      display: block;
+      width: 35px;
+      height: 35px;
+      background: #fff;
+    }
+    .hamburger div {
+      margin: 7px auto;
+      height: 2px;
+      width: 100%;
+      background: $bg-color;
+      transition: 0.4s;
+    }
+    .active.hamburger div:nth-child(2) {
+      transform: translateX(10px);
+      opacity: 0;
+    }
+    .active.hamburger div:nth-child(1) {
+      transform: rotate(45deg) translate(13.5px);
+    }
+    .active.hamburger div:nth-child(3) {
+      transform: rotate(-45deg) translate(13.5px);
+    }
+  
+  
+  
+  
+    .grid-2 {
+      width: 100%;
+      margin: 0 auto;
+  height: 100%;
+  padding: 0;
+      grid-column-gap: 0;
+  display: block;
+  
+  
+      
+    }
+  
+    // Contact animation boxes
+    .main-lists {
+      max-width:24rem;
+      margin: 0 auto;
+      margin-top: 4rem;
+  
+    
+  
+      .contact-lists {
+  
+        width: 80%;
+        margin: 0.7rem auto;
+        padding: 0.2rem 1rem;
+  
+        
+        h1{
+          margin-top:2rem;
+        }
+  
+  
+      }
+      .lists {
+        .contact-item-box {
+          padding: 0.5rem 1rem;
+          // min-width: 14rem;
+          
+          max-width: 18rem;
+  
+          h1{
+            font-size:16px;
+          }
+        }
+      }
+    }
+  
+  
+  
+  .add-contact{
+    width: 3.8rem;
+    line-height:1.2em;
+    display: block;
+   border: none;
+   background: $bg-color;
+   padding: 1rem;
+   border-radius: 50px;
+   font-size: 1.5rem;
+   color:white;
+  position:fixed;
+  bottom:2rem;
+  right:1.5rem;
+  z-index:5;
+  
+  cursor: pointer;
+  transition:0.5s;
+  
+  }
+  
+  .add-contact.cross{
+  
+  
+   
+  
+    background: rgb(212, 30, 30);
+  }
+  
+  
+  
+  .overlay{
+    position:fixed;
+    background:rgba(0,0,0,0.7);
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index:1;
+    transform:scaleX(0);
+    transition:0.5s;
+  }
+  .active.overlay{
+    transform:scaleX(1);
+  
+  }
+    .popup-box{
+      z-index:10;
+      
+  
+      width:23rem;
+      height: 26rem;
+      position:fixed;
+      top:50%;
+      left:50%;
+  
+      transform: scale(0);
+     
+      transition: 0.5s;
+      
+  
+   
+    
+  
+      .contact-form{
+        width:100%;
+      
+        height:100%;
+      
+      }
+    }
+  
+    .active.popup-box{
+      transform: scale(1);
+  
+      transform: translate(-50%,-50%);
+  
+    }
+  
+  
+    .container{
+      padding:0 2rem;
+    }
+  
+   
+ 
+  
+    #form-reg {
+      margin-top: 2.5rem;
+      width: 20rem;
+      height: 26rem;
+      padding: 1rem;
+      input[type="submit"] {
+        width: 12rem;
+      }
+    }
+    .login-form {
+      width: 20rem;
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 420px) {
+    body {
+      overflow-x: hidden;
+    }
+    .container {
+      margin: 0;
+    }
+  
+    .main-lists{
+      
+      .contact-lists{
+        margin-top:2rem;
+      }
+  
+      .contact-item-box{
+  
+        width:13rem;
+        h1{
+          margin-top: 1.5rem;
+          margin-bottom: 0;
+          font-size:16px;
+        }
+      }
+    }
+  
+    #form-reg {
+      margin: 0 auto;
+      margin-top: 4rem;
+      height: 30rem;
+  
+      input[type="submit"] {
+        width: 16rem;
+      }
+    }
+    .navbar {
+     
+  padding: 0 1rem;
+      h1 {
+        padding-top: 0.6rem;
+        font-size: 1.8rem;
+      }
+    }
+  
+    .grid-2 {
+    
+  
+      .popup-box{
+        max-width: 18rem;
+        max-height:23rem;
+        input[type="submit"],button{
+          width:8rem;
+        }
+      }
+    }
+  }
+  
