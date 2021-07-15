@@ -45,8 +45,8 @@ const ContactForm = ({ open, closePop }) => {
       clearErrorContacts();
     }
     if (current !== null) {
-		setContact(current);
-	
+      setContact(current);
+
       // setAlert2(true);
       // setAlert3(true);
     } else {
@@ -59,18 +59,13 @@ const ContactForm = ({ open, closePop }) => {
       // setAlert1(true);
       // setAlert2(false);
       // setAlert3(false);
-	  }
-	  
-    //eslint-disable-next-line  
+    }
+
+    //eslint-disable-next-line
   }, [current, contactContext, error]);
 
-  const closeBox = () => {
-	  closePop();
 
-	  
-  }
 
-	
   const onChange = (e) => {
     setContact({
       ...contact,
@@ -122,7 +117,7 @@ const ContactForm = ({ open, closePop }) => {
   return (
     <div className={open ? "active overlay" : "overlay"}>
       <div className={open ? "active popup-box" : "popup-box"}>
-        <button className="pop-btn" onClick={closeBox}>
+        <button className="closebtn-pop" onClick={closePop}>
           &times;
         </button>
         <form action="#" className="contact-form" onSubmit={onSubmit}>
