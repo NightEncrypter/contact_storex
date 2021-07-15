@@ -18,7 +18,9 @@ const Login = (props) => {
 
 	useEffect(() => {
 		if (isAuthenticated) {
+			setAlert("Login success", "login-success");
 			props.history.push('/');
+			
 		}
 
 		if (error ==='user not found' ) {

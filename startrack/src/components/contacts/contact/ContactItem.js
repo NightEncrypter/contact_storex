@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import ContactContext from '../../../context/contact/contactContext';
 
 
-	const ContactItem = ({contact}) => {
+	const ContactItem = ({contact,openPop}) => {
 	const contactContext = useContext(ContactContext);
 	const { deleteContact,currentContact,clearCurrent } = contactContext;
 		const { name, phone, email, type, _id } = contact;
@@ -18,6 +18,7 @@ import ContactContext from '../../../context/contact/contactContext';
 
 	const setCurrent = () => {
 		currentContact(contact);
+		openPop();
 		};
 		
 

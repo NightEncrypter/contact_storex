@@ -3,7 +3,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Spinner from './Spinner';
 import ContactItem from './ContactItem';
 import ContactContext from '../../../context/contact/contactContext';
-const Contacts = () => {
+const Contacts = ({openPop}) => {
 	const contactContext = useContext(ContactContext);
 	const { filtered, getContacts, contacts, loading } = contactContext;
 
@@ -26,7 +26,7 @@ const Contacts = () => {
 						{filtered !== null && !loading
 							? filtered.map(contact => (<CSSTransition key={contact._id} timeout={600} classNames="item"><ContactItem contact={contact} /></CSSTransition>)) :
 							contacts.map(contact => (<CSSTransition key={contact._id} timeout={500}>
-							<ContactItem contact={contact} classNames="item" />
+								<ContactItem openPop={openPop}contact={contact} classNames="item" />
 							</CSSTransition>))}</TransitionGroup>) : (<Spinner />
 				)}
 			</div>
